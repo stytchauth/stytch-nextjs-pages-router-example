@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { cookies } from "next/headers";
 import { useRouter } from "next/router";
 import { useStytchUser } from "@stytch/nextjs";
 import Profile from "src/components/Profile";
