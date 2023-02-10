@@ -20,6 +20,7 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
+      {/* Wrap the application with StytchProvider to make the SDK available in children components */}
       <StytchProvider stytch={stytch}>
         <main>
           <div className="container">

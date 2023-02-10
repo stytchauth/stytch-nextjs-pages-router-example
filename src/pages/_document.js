@@ -22,7 +22,7 @@ export default function Document() {
             <Link
               className="header"
               target="_blank"
-              href="https://www.github.com"
+              href="https://github.com/stytchauth/stytch-nextjs-example"
             >
               <Image
                 alt="Github"

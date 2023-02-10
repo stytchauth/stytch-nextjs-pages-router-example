@@ -39,6 +39,7 @@ export async function getServerSideProps({ req }) {
     return redirectRes;
   }
 
+  // loadStytch() is a helper function for initalizing the Stytch Backend SDK. See the function definition for more details.
   const stytchClient = loadStytch();
 
   try {

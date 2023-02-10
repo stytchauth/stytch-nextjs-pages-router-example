@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useStytchUser } from "@stytch/nextjs";
 import Login from "src/components/Login";
 
+// In this app the index route (/) is a login page. We use the Stytch Next.js SDK to redirect the user if they are already logged in.
 export default function LoginPage() {
   const { user, isInitialized } = useStytchUser();
   const router = useRouter();
