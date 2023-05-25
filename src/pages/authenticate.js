@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { useStytchUser, useStytch } from "@stytch/nextjs";
+import { useStytchMember, useStytchB2BClient } from "@stytch/nextjs/b2b";
 
 const OAUTH_TOKEN = "oauth";
 const MAGIC_LINKS_TOKEN = "magic_links";
@@ -14,8 +14,8 @@ The AuthenticatePage will detect the presence of a token in the query parameters
 On successful authentication, a session will be created and the user will be redirect to /profile
 */
 const Authenticate = () => {
-  const { user, isInitialized } = useStytchUser();
-  const stytch = useStytch();
+  const { user, isInitialized } = useStytchMember();
+  const stytch = useStytchB2BClient();
   const router = useRouter();
 
   useEffect(() => {

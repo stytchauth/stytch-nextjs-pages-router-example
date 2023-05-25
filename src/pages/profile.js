@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { useStytchUser } from "@stytch/nextjs";
+import { useStytchMember } from "@stytch/nextjs/b2b";
 import Profile from "src/components/Profile";
 import loadStytch from "lib/loadStytch";
 
 export default function ProfilePage() {
-  const { user, isInitialized } = useStytchUser();
+  const { user, isInitialized } = useStytchMember();
   const router = useRouter();
 
   // If the Stytch SDK no longer has a User then redirect to login; for example after logging out.

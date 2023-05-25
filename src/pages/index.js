@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { useStytchUser } from "@stytch/nextjs";
+import { useStytchMember } from "@stytch/nextjs/b2b";
 import Login from "src/components/Login";
 
 // In this app the index route (/) is a login page. We use the Stytch Next.js SDK to redirect the user if they are already logged in.
 export default function LoginPage() {
-  const { user, isInitialized } = useStytchUser();
+  const { user, isInitialized } = useStytchMember();
   const router = useRouter();
   // If the Stytch SDK detects a User then redirect to profile; for example if a logged in User navigated directly to this URL.
   useEffect(() => {

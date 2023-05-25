@@ -10,8 +10,9 @@
   },
   "dependencies": {
     "@next/font": "13.2.3",
-    "@stytch/nextjs": "^2.0.0",
-    "@stytch/vanilla-js": "^0.9.2",
+    "@stytch/nextjs": "^5.0.2",
+    "@stytch/vanilla-js": "^0.13.4",
+    "@stytch/react": "^3.0.0",
     "eslint": "8.33.0",
     "eslint-config-next": "13.2.3",
     "next": "13.1.6",
