@@ -1,44 +1,47 @@
-import React from "react";
-import { StytchLogin } from "@stytch/nextjs";
-import { Products } from "@stytch/vanilla-js";
+import { StytchB2B } from "@stytch/nextjs/b2b";
 
 /*
-Login configures and renders the StytchLogin component which is a prebuilt UI component for auth powered by Stytch
+Login configures and renders the StytchB2BLogin component which is a prebuilt UI component for auth powered by Stytch.
 
 This component accepts style, config, and callbacks props. To learn more about possible options review the documentation at
-https://stytch.com/docs/sdks/javascript-sdk#ui-configs
+https://stytch.com/docs/b2b/sdks/javascript-sdk#ui-configs
 */
 const Login = () => {
-  const styles = {
-    container: {
-      width: "100%",
-    },
-    buttons: {
-      primary: {
-        backgroundColor: "#4A37BE",
-        borderColor: "#4A37BE",
-      },
-    },
+  const style = {
+    fontFamily: 'Arial',
   };
+  
+  const callbacks = {
+    onEvent: ({ type, data }) => {
+      console.log(type, data);
+    },
+    onError: (data) => {
+      console.log(data);
+    }
+  }
 
-  const REDIRECT_URL = "http://localhost:3000/authenticate";
+  const REDIRECT_URL_BASE = "http://localhost:3000/";
 
   const config = {
-    products: [Products.emailMagicLinks, Products.oauth],
-    emailMagicLinksOptions: {
-      loginRedirectURL: REDIRECT_URL,
-      loginExpirationMinutes: 60,
-      signupRedirectURL: REDIRECT_URL,
-      signupExpirationMinutes: 60,
-    },
-    oauthOptions: {
-      providers: [{ type: "google" }],
-      loginRedirectURL: REDIRECT_URL,
-      signupRedirectURL: REDIRECT_URL,
+    products: ["passwords"],
+    sessionOptions: { sessionDurationMinutes: 60 },
+    authFlowType: "Organization",
+    passwordOptions: {
+      loginRedirectURL: REDIRECT_URL_BASE + "authenticate",
+      resetPasswordRedirectURL: REDIRECT_URL_BASE + "reset-password",
+      resetPasswordExpirationMinutes: 60,
     },
   };
 
-  return <StytchLogin config={config} styles={styles} />;
+  return (
+    <div>
+      <StytchB2B
+        config={config}
+        styles={style}
+        callbacks={callbacks}
+      />
+    </div>
+  );
 };
 
 export default Login;

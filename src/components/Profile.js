@@ -1,5 +1,5 @@
 import React from "react";
-import { useStytch, useStytchSession, useStytchUser } from "@stytch/nextjs";
+import { useStytchB2BClient, useStytchMemberSession, useStytchMember } from "@stytch/nextjs/b2b";
 
 /*
 The Profile component is shown to a user that is logged in.
@@ -9,11 +9,11 @@ This component renders the full User and Session object for education.
 This component also includes a log out button which is accomplished by making a method call to revoking the existing session
 */
 const Profile = () => {
-  const stytch = useStytch();
+  const stytch = useStytchB2BClient();
   // Get the Stytch User object if available
-  const { user } = useStytchUser();
+  const { user } = useStytchMember();
   // Get the Stytch Session object if available
-  const { session } = useStytchSession();
+  const { session } = useStytchMemberSession();
 
   return (
     <div className="card">
