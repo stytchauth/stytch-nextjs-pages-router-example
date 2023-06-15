@@ -20,17 +20,16 @@ const Login = () => {
     }
   }
 
-  const REDIRECT_URL = "http://localhost:3000/authenticate";
+  const REDIRECT_URL_BASE = "http://localhost:3000/";
 
   const config = {
-    products: ['emailMagicLinks'],
-    emailMagicLinksOptions: {
-      loginRedirectURL: REDIRECT_URL,
-      signupRedirectURL: REDIRECT_URL,
-    },
-    authFlowType: "Discovery",
-    sessionOptions: {
-      sessionDurationMinutes: 60,
+    products: ["passwords"],
+    sessionOptions: { sessionDurationMinutes: 60 },
+    authFlowType: "Organization",
+    passwordOptions: {
+      loginRedirectURL: REDIRECT_URL_BASE + "authenticate",
+      resetPasswordRedirectURL: REDIRECT_URL_BASE + "reset-password",
+      resetPasswordExpirationMinutes: 60,
     },
   };
 
