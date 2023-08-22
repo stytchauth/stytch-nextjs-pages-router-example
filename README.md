@@ -22,11 +22,8 @@ Follow the steps below to get this application fully functional and running usin
 
 2. Within your new Project, navigate to [SDK configuration](https://stytch.com/dashboard/sdk-configuration), and make the following changes:
 
-   - Click **Enable SDK**.
-   - Under **Authorized environments** add the domain `http://localhost:3000`.
-     
-     <img width="400" alt="Authorized environments" src="https://user-images.githubusercontent.com/100632220/217052985-2e6fc264-7b8b-452b-9d24-66a76c143d10.png">
-
+   - Under **Test environment**, Click **Enable SDK in test**.
+   - Under **Authorized applications** add the domain `http://localhost:3000` if it isn't already there.
    - Within the **Email Magic Links** drawer, toggle on **Enable the LoginOrCreate Flow**.
      
      <img width="400" alt="SDK Email Magic Links" src="https://user-images.githubusercontent.com/100632220/217053215-8c369de8-7828-4ad6-ac88-a50918520fc3.png">
@@ -39,9 +36,11 @@ Follow the steps below to get this application fully functional and running usin
    
    <img width="400" alt="Redirect URLs" src="https://user-images.githubusercontent.com/100632220/217983021-d8bf6fff-6a68-4e94-bffd-d062e69c8817.png">
 
-4. Navigate to [OAuth](https://stytch.com/dashboard/oauth), and set up login for Google in the Test environment. Follow all the instructions provided in the Dashboard. If you are not interested in OAuth login you can skip this step. However, the _Continue with Google_ button in this application will not work.
+
+4. Navigate to [OAuth](https://stytch.com/dashboard/oauth) and set up Google login in the Test environment. You don't need to copy the Google start URL for the Test environment because the Test environment is pre-configured to work! However, if you want to set up Google Oauth in the Live environment, follow all of the instructions provided in the Dashboard. If you are not interested in OAuth login you can skip this step. However, the _Continue with Google_ button in this application will not work in the Live environment.
    
    <img width="400" alt="OAuth configuration" src="https://user-images.githubusercontent.com/100632220/217055674-a7dafc17-6ad3-492f-8dd2-92560d60dc00.png">
+
 
 5. Finally, navigate to [API Keys](https://stytch.com/dashboard/api-keys). You will need the `project_id`, `secret`, and `public_token` values found on this page later on.
 
