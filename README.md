@@ -12,7 +12,7 @@ This project uses Stytch's [Next.js SDK](https://stytch.com/docs/sdks/javascript
 
 This application features Email Magic Links and Google OAuth authentication. You can use this application's source code as a learning resource, or use it as a jumping off point for your own project. We are excited to see what you build with Stytch!
 
-We'd also recommend checking out our [Next.js quickstart guide](https://stytch.com/docs/guides/quickstarts/nextjs), which explains how to incorporate the Stytch authentication concepts demonstrated in this example app into your own application.
+We'd also recommend checking out our [Next.js quickstart guide](https://stytch.com/docs/guides/quickstarts/nextjs), which explains how to incorporate the Stytch authentication concepts demonstrated in this example app into your own Next.js application.
 
 ## Set up
 
