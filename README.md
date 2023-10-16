@@ -8,6 +8,8 @@
 
 This example application demonstrates how one may use Stytch within a Next.js application using the new [Page Router](https://nextjs.org/docs/pages). If you'd like to see an App Router example, check out our [Next.js App Router example](https://github.com/stytchauth/stytch-nextjs13-example).
 
+This project uses Stytch's [Next.js SDK](https://stytch.com/docs/sdks/javascript-sdk) which provides pre-built UI components, useful React hooks, headless methods to securely interact with Stytch, and is SSR friendly. This project also utilizes Stytch's [Node Backend SDK](https://www.npmjs.com/package/stytch) for authenticating the logged in user's session.
+
 This application features Email Magic Links and Google OAuth authentication. You can use this application's source code as a learning resource, or use it as a jumping off point for your own project. We are excited to see what you build with Stytch!
 
 ## Set up
@@ -20,7 +22,7 @@ Follow the steps below to get this application fully functional and running usin
 
 2. Within your new Project, navigate to [SDK configuration](https://stytch.com/dashboard/sdk-configuration), and click **Enable SDK**.
 
-3. Navigate to [OAuth](https://stytch.com/dashboard/oauth), and set up login for Google in the Test environment.
+3. Navigate to [OAuth](https://stytch.com/dashboard/oauth), and enable login for Google in the Test environment. Config will be done for you automatically in Test.
 
    <img width="400" alt="OAuth configuration" src="https://user-images.githubusercontent.com/100632220/217055674-a7dafc17-6ad3-492f-8dd2-92560d60dc00.png">
 
@@ -33,7 +35,10 @@ In your terminal clone the project and install dependencies:
 ```bash
 git clone https://github.com/cal-stytch/stytch-nextjs-example.git
 cd stytch-nextjs-example
+# Install dependencies, you may use either pnpm or npm.
 pnpm i
+# or
+npm i
 ```
 
 Next, create `.env.local` file by running the command below which copies the contents of `.env.template`.
@@ -58,6 +63,8 @@ After completing all the set up steps above the application can be run with the 
 
 ```bash
 pnpm run dev
+# or
+npm run dev
 ```
 
 The application will be available at [`http://localhost:3000`](http://localhost:3000).
