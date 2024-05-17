@@ -6,7 +6,7 @@
 
 ## Overview
 
-This example application demonstrates how one may use Stytch within a Next.js application using the new [Page Router](https://nextjs.org/docs/pages). If you'd like to see an App Router example, check out our [Next.js App Router example](https://github.com/stytchauth/stytch-nextjs-app-router-example).
+This example application demonstrates how one may use Stytch within a Next.js application using the new [Pages Router](https://nextjs.org/docs/pages). If you'd like to see an App Router example, check out our [Next.js App Router example](https://github.com/stytchauth/stytch-nextjs-app-router-example).
 
 This project uses Stytch's [Next.js SDK](https://stytch.com/docs/sdks/javascript-sdk) which provides pre-built UI components, useful React hooks, headless methods to securely interact with Stytch, and is SSR friendly. This project also utilizes Stytch's [Node Backend SDK](https://www.npmjs.com/package/stytch) for authenticating the logged in user's session.
 
