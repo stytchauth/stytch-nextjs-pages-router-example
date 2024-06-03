@@ -12,7 +12,7 @@ This project uses Stytch's [Next.js SDK](https://stytch.com/docs/sdks/javascript
 
 We'd also recommend checking out our [Next.js quickstart guide](https://stytch.com/docs/guides/quickstarts/nextjs), which explains how to incorporate the Stytch authentication concepts demonstrated in this example app into your own Next.js application.
 
-This application features Email Magic Links and Google OAuth authentication. You can use this application's source code as a learning resource, or use it as a jumping off point for your own project. We are excited to see what you build with Stytch!
+This application features Email Magic Links authentication. You can use this application's source code as a learning resource, or use it as a jumping off point for your own project. We are excited to see what you build with Stytch!
 
 ## Set up
 
@@ -24,11 +24,7 @@ Follow the steps below to get this application fully functional and running usin
 
 2. Within your new Project, navigate to [SDK configuration](https://stytch.com/dashboard/sdk-configuration), and click **Enable SDK**.
 
-3. Navigate to [OAuth](https://stytch.com/dashboard/oauth), and enable login for Google in the Test environment. Config will be done for you automatically in Test.
-
-   <img width="400" alt="OAuth configuration" src="https://user-images.githubusercontent.com/100632220/217055674-a7dafc17-6ad3-492f-8dd2-92560d60dc00.png">
-
-4. Finally, navigate to [API Keys](https://stytch.com/dashboard/api-keys). You will need the `project_id`, `secret`, and `public_token` values found on this page later on.
+3. Finally, navigate to [API Keys](https://stytch.com/dashboard/api-keys). You will need the `project_id`, `secret`, and `public_token` values found on this page later on.
 
 ### On your machine
 
@@ -79,7 +75,7 @@ This example app showcases a small portion of what you can accomplish with Stytc
 
 1. Add additional login methods like [Passwords](https://stytch.com/docs/guides/passwords/sdk).
 2. Replace the prebuilt UI with your own using by using the SDK's [headless methods](https://stytch.com/docs/sdks/javascript-sdk).
-3. Replace the Google OAuth button with the high converting [Google One Tap UI](https://stytch.com/docs/guides/oauth/sdk).
+3. Add a Google OAuth button, or replace it with the high converting [Google One Tap UI](https://stytch.com/docs/guides/oauth/sdk).
 4. Secure your app further by building MFA authentication using methods like [WebAuthn](https://stytch.com/docs/sdks/javascript-sdk/webauthn).
 
 ## Get help and join the community
