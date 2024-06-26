@@ -11,7 +11,7 @@ export default function Document() {
           <Link className="header" href="/">
             <Image alt="sdf" src="logo.svg" width={190} height={200} />
           </Link>
-          <div class="link-container">
+          <div className="link-container">
             <Link
               className="header"
               target="_blank"
